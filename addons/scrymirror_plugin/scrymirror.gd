@@ -1,6 +1,6 @@
 extends Control
 
-@export var scry_url: String = "glooppi:3000"
+@export var scry_url: String = "glooplab.live:3000"
 @export var show_dev_tools: bool = true
 var next_event_object_for_server : Dictionary 
 var outgoing_queue : Array
