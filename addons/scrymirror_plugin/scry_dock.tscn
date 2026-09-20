@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c6o5te8ywgss0"]
+
+[ext_resource type="Script" uid="uid://cuun6d8otbf6p" path="res://addons/scrymirror_plugin/scry_dock.gd" id="1_2cksh"]
+
+[node name="Control" type="Control" unique_id=745145262]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2cksh")
+
+[node name="ServerLineEdit" type="LineEdit" parent="." unique_id=1599237759]
+layout_mode = 0
+offset_right = 143.0
+offset_bottom = 31.0
+
+[connection signal="text_changed" from="ServerLineEdit" to="." method="_on_server_line_edit_text_changed"]

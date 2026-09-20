@@ -1,0 +1,264 @@
+[gd_scene format=3 uid="uid://d2k227ou374he"]
+
+[ext_resource type="Script" uid="uid://dvm101ctrjb4y" path="res://addons/scrymirror_plugin/scrymirror.gd" id="1_ai38j"]
+[ext_resource type="Theme" uid="uid://cd2xnskx3f1wf" path="res://addons/scrymirror_plugin/scrymirror_widgets_theme.tres" id="2_l6oaa"]
+
+[node name="ScryMirror" type="FoldableContainer" unique_id=697697467 groups=["scrymirror"]]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -832.0
+offset_bottom = -356.0
+grow_horizontal = 2
+grow_vertical = 2
+title = "ScryMirror"
+script = ExtResource("1_ai38j")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=648454941]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=690482212]
+layout_mode = 2
+theme = ExtResource("2_l6oaa")
+
+[node name="Hbox1" type="GridContainer" parent="VBoxContainer" unique_id=105917088]
+layout_mode = 2
+columns = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/Hbox1" unique_id=321024935]
+layout_mode = 2
+text = "Game:"
+
+[node name="StartButton" type="Button" parent="VBoxContainer/Hbox1" unique_id=795235904]
+layout_mode = 2
+text = "Start"
+
+[node name="EndButton" type="Button" parent="VBoxContainer/Hbox1" unique_id=122268132]
+layout_mode = 2
+text = "End"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Hbox1" unique_id=2076907174]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = " Teams:"
+
+[node name="TeamcountSpinBox" type="SpinBox" parent="VBoxContainer/Hbox1" unique_id=1493039489]
+layout_mode = 2
+
+[node name="HBox2" type="HBoxContainer" parent="VBoxContainer" unique_id=1343399394]
+layout_mode = 2
+
+[node name="TabContainer" type="TabContainer" parent="VBoxContainer/HBox2" unique_id=652973525]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 10
+current_tab = 1
+
+[node name="MultiChoice" type="HBoxContainer" parent="VBoxContainer/HBox2/TabContainer" unique_id=1939313949]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBox2/TabContainer/MultiChoice" unique_id=927101179]
+layout_mode = 2
+text = "Set Random:"
+
+[node name="SendRandomQButton" type="Button" parent="VBoxContainer/HBox2/TabContainer/MultiChoice" unique_id=2136813167]
+layout_mode = 2
+text = "Q"
+
+[node name="SendRandomAsButton" type="Button" parent="VBoxContainer/HBox2/TabContainer/MultiChoice" unique_id=25334011]
+layout_mode = 2
+text = "A's"
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBox2/TabContainer/MultiChoice" unique_id=1892659870]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = " Correct
+ Answer"
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/HBox2/TabContainer/MultiChoice" unique_id=665511393]
+layout_mode = 2
+min_value = 1.0
+max_value = 4.0
+value = 1.0
+
+[node name="MultiMulti" type="HBoxContainer" parent="VBoxContainer/HBox2/TabContainer" unique_id=1273718953]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBox2/TabContainer/MultiMulti" unique_id=289370275]
+layout_mode = 2
+text = "Set: "
+
+[node name="SendMultiMultiQsButton" type="Button" parent="VBoxContainer/HBox2/TabContainer/MultiMulti" unique_id=612988195]
+layout_mode = 2
+text = "Qs"
+
+[node name="SendMultiMultiAsButton" type="Button" parent="VBoxContainer/HBox2/TabContainer/MultiMulti" unique_id=1411995695]
+layout_mode = 2
+text = "As"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1237912697]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1904610429]
+layout_mode = 2
+text = "Event:"
+
+[node name="SendEventButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1329661072]
+layout_mode = 2
+text = "Send"
+
+[node name="StartEventButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1478959458]
+layout_mode = 2
+text = "Start"
+
+[node name="EndEventButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1786942230]
+layout_mode = 2
+text = "End"
+
+[node name="GetAnswersButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1166686231]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = " Print Answers"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=637122513]
+layout_mode = 2
+
+[node name="TabContainer" type="TabContainer" parent="VBoxContainer/HBoxContainer2" unique_id=169662150]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 10
+current_tab = 2
+
+[node name="ScoreBoard Values" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2/TabContainer" unique_id=324186984]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2/TabContainer/ScoreBoard Values" unique_id=238808139]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Team is ALL, Boxes are 
+Name, Label, Value"
+
+[node name="NameLineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer2/TabContainer/ScoreBoard Values" unique_id=1110906810]
+layout_mode = 2
+text = "dog"
+placeholder_text = "Label"
+
+[node name="LabelLineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer2/TabContainer/ScoreBoard Values" unique_id=1321713315]
+layout_mode = 2
+text = "Dog's Name"
+placeholder_text = "Label"
+
+[node name="ValueLineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer2/TabContainer/ScoreBoard Values" unique_id=711710236]
+layout_mode = 2
+text = "Fido"
+placeholder_text = "Value"
+
+[node name="Pose & Create" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2/TabContainer" unique_id=310168609]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="ScoreBox Pos" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2/TabContainer/Pose & Create" unique_id=653259924]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2/TabContainer/Pose & Create/ScoreBox Pos" unique_id=549450169]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Vals are: Row Col 
+Width Height"
+
+[node name="RowSpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer2/TabContainer/Pose & Create/ScoreBox Pos" unique_id=1737702295]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("2_l6oaa")
+value = 1.0
+
+[node name="ColSpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer2/TabContainer/Pose & Create/ScoreBox Pos" unique_id=1981502891]
+layout_mode = 2
+value = 1.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2/TabContainer/Pose & Create" unique_id=335940210]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/TabContainer/Pose & Create/HBoxContainer" unique_id=1524546851]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Editing name
+from tab 1"
+
+[node name="WidthSpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer2/TabContainer/Pose & Create/HBoxContainer" unique_id=474594772]
+layout_mode = 2
+value = 1.0
+
+[node name="HeightSpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer2/TabContainer/Pose & Create/HBoxContainer" unique_id=99876713]
+layout_mode = 2
+value = 1.0
+
+[node name="CreateButton" type="Button" parent="VBoxContainer/HBoxContainer2/TabContainer/Pose & Create/HBoxContainer" unique_id=2104654237]
+layout_mode = 2
+text = "Create"
+
+[node name="Edit & Del" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2/TabContainer" unique_id=1231792852]
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/TabContainer/Edit & Del" unique_id=1499069702]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Editing name
+from tab 1"
+
+[node name="EditButton" type="Button" parent="VBoxContainer/HBoxContainer2/TabContainer/Edit & Del" unique_id=915854954]
+layout_mode = 2
+text = "Edit"
+
+[node name="ScoreEditLineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer2/TabContainer/Edit & Del" unique_id=368866072]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "New Value"
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2/TabContainer/Edit & Del" unique_id=1591114586]
+layout_mode = 2
+text = "       "
+
+[node name="DeleteButton" type="Button" parent="VBoxContainer/HBoxContainer2/TabContainer/Edit & Del" unique_id=575633506]
+layout_mode = 2
+text = "Delete"
+
+[node name="CodesTextEdit" type="TextEdit" parent="VBoxContainer" unique_id=1748203338]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Codes appear here on game creation."
+wrap_mode = 1
+
+[node name="EventTickTimer" type="Timer" parent="." unique_id=597064198]
+one_shot = true
+
+[node name="FinalSafetyTimer" type="Timer" parent="." unique_id=691019641]
+wait_time = 3.0
+one_shot = true
+
+[node name="PreFlightTimer" type="Timer" parent="." unique_id=1515834866]
+wait_time = 7.0
+one_shot = true
+
+[connection signal="pressed" from="VBoxContainer/Hbox1/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Hbox1/EndButton" to="." method="_on_end_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBox2/TabContainer/MultiChoice/SendRandomQButton" to="." method="_on_send_random_q_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBox2/TabContainer/MultiChoice/SendRandomAsButton" to="." method="_on_send_random_as_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBox2/TabContainer/MultiMulti/SendMultiMultiQsButton" to="." method="_on_send_multi_multi_qs_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBox2/TabContainer/MultiMulti/SendMultiMultiAsButton" to="." method="_on_send_multi_multi_as_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/SendEventButton" to="." method="_on_send_event_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/StartEventButton" to="." method="_on_start_event_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/EndEventButton" to="." method="_on_end_event_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/GetAnswersButton" to="." method="_on_get_answers_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/TabContainer/Pose & Create/HBoxContainer/CreateButton" to="." method="_on_scoreboard_create_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/TabContainer/Edit & Del/EditButton" to="." method="_on_score_edit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/TabContainer/Edit & Del/DeleteButton" to="." method="_on_scoreboard_delete_button_pressed"]
+[connection signal="timeout" from="EventTickTimer" to="." method="_on_event_tick_timer_timeout"]
+[connection signal="timeout" from="FinalSafetyTimer" to="." method="_on_final_safety_timer_timeout"]
+[connection signal="timeout" from="PreFlightTimer" to="." method="_on_pre_flight_timer_timeout"]
